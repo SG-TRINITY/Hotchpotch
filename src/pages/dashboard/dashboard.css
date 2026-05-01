@@ -1,0 +1,60 @@
+.page--dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dash-hero {
+  margin-bottom: 1.5rem;
+}
+
+.dash-hero__title {
+  margin: 0 0 0.35rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--neo-ink);
+}
+
+.dash-hero__lede {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #3d342c;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.neo-card {
+  padding: 1.1rem 1.15rem;
+  background: var(--neo-paper);
+  border: 3px solid var(--neo-ink);
+  border-radius: 16px;
+  box-shadow: var(--neo-shadow);
+}
+
+.dash-card__title {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--neo-muted);
+}
+
+.dash-card__stat {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--neo-ink);
+}
+
+.dash-card__hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.82rem;
+  color: #5c524a;
+}

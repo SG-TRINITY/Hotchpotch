@@ -1,0 +1,16 @@
+:root {
+  --sidebar-bg: #1a1a1a;
+  --sidebar-highlight: #f2bc1b;
+  --neo-ink: #0d0d0d;
+  --neo-shadow: 5px 5px 0 var(--neo-ink);
+  --neo-shadow-sm: 3px 3px 0 var(--neo-ink);
+  --neo-paper: #fffef9;
+  --neo-row: #faf7f0;
+  --neo-muted: #6b5e52;
+  --status-interview: #f39c12;
+  --status-offer: #769656;
+  --status-applied: #c0392b;
+  --status-rejected: #bdc3c7;
+  --sync-bg: #d4edda;
+  --text-dark: #1a1a1a;
+}

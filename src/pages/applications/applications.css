@@ -1,0 +1,385 @@
+.page--applications .main__header,
+.page--applications .jobs-card,
+.page--applications .pagination {
+  position: relative;
+  z-index: 2;
+}
+
+.page--applications .main__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 1.35rem;
+  flex-wrap: wrap;
+}
+
+.page--applications .main__title {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  letter-spacing: -0.02em;
+  color: var(--neo-ink);
+}
+
+.page--applications .quote-box {
+  margin: 0;
+  max-width: min(100%, 300px);
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border: 3px solid var(--neo-ink);
+  border-radius: 4px;
+  box-shadow: var(--neo-shadow);
+}
+
+.page--applications .quote-box p {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #2c241c;
+  text-align: left;
+}
+
+.page--applications .jobs-card {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.35rem 1.35rem 0;
+  border-radius: 22px;
+  border: 3px solid var(--neo-ink);
+  background: var(--neo-paper);
+  box-shadow: var(--neo-shadow);
+}
+
+.page--applications .jobs-card__toolbar {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--neo-ink);
+}
+
+.page--applications .jobs-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.page--applications .jobs-card__row--top {
+  margin-bottom: 1rem;
+}
+
+.page--applications .jobs-card__row--filters {
+  align-items: center;
+}
+
+.page--applications .jobs-pot {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--neo-ink);
+}
+
+.page--applications .jobs-pot__icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.page--applications .jobs-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.page--applications .search-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.75rem;
+  min-width: min(220px, 52vw);
+  background: #fff;
+  border: 2px solid var(--neo-ink);
+  border-radius: 999px;
+  box-shadow: var(--neo-shadow-sm);
+}
+
+.page--applications .search-pill__icon {
+  display: flex;
+  color: var(--neo-ink);
+  flex-shrink: 0;
+}
+
+.page--applications .search-pill__input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.page--applications .search-pill__input::placeholder {
+  color: #888;
+}
+
+.page--applications .neo-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--neo-ink);
+  background: #fff;
+  box-shadow: var(--neo-shadow-sm);
+  cursor: pointer;
+  color: var(--neo-ink);
+}
+
+.page--applications .neo-icon-btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--neo-ink);
+}
+
+.page--applications .filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.page--applications .filter-tab {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 2px solid var(--neo-ink);
+  background: #fff;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  color: var(--neo-ink);
+  box-shadow: var(--neo-shadow-sm);
+}
+
+.page--applications .filter-tab--active {
+  background: var(--neo-ink);
+  color: #fff;
+}
+
+.page--applications .filter-tab:focus-visible,
+.page--applications .neo-icon-btn:focus-visible,
+.page--applications .search-pill__input:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.page--applications .filter-tab__count {
+  font-weight: 600;
+  opacity: 0.92;
+}
+
+.page--applications .sync-badge {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #1e4620;
+  background: var(--sync-bg);
+  border: 2px solid var(--neo-ink);
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 var(--neo-ink);
+}
+
+.page--applications .sync-badge__icon {
+  flex-shrink: 0;
+}
+
+.page--applications .jobs-table-wrap {
+  overflow-x: auto;
+  margin: 0 -1.35rem;
+  padding: 0 1.35rem 1.25rem;
+}
+
+.page--applications .jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.page--applications .jobs-table thead th {
+  padding: 0.65rem 0.5rem 0.85rem;
+  text-align: left;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--neo-muted);
+  border-bottom: 2px solid var(--neo-ink);
+}
+
+.page--applications .jobs-table tbody tr {
+  background: var(--neo-row);
+}
+
+.page--applications .jobs-table tbody tr:nth-child(even) {
+  background: #f3efe6;
+}
+
+.page--applications .jobs-table td {
+  padding: 0.85rem 0.5rem;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(13, 13, 13, 0.15);
+  color: var(--neo-ink);
+}
+
+.page--applications .co-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.page--applications .neo-sq {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+  background: var(--sq, #333);
+  border: 2px solid var(--neo-ink);
+  box-shadow: var(--neo-shadow-sm);
+  flex-shrink: 0;
+}
+
+.page--applications .neo-sq--stark {
+  --sq: #c0392b;
+}
+
+.page--applications .neo-sq--acme {
+  --sq: #2980b9;
+}
+
+.page--applications .neo-sq--cloudsync {
+  --sq: #8e44ad;
+}
+
+.page--applications .neo-sq--massive-dynamic {
+  --sq: #16a085;
+}
+
+.page--applications .co-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.page--applications .role-cell {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.page--applications .salary-pill {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  background: #e8e4dc;
+  border: 2px solid var(--neo-ink);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  box-shadow: 2px 2px 0 var(--neo-ink);
+}
+
+.page--applications .status-pill {
+  display: inline-block;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  border: 2px solid var(--neo-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  box-shadow: 2px 2px 0 var(--neo-ink);
+}
+
+.page--applications .status-pill--interview {
+  background: var(--status-interview);
+  color: #1a1a1a;
+}
+
+.page--applications .status-pill--offer {
+  background: var(--status-offer);
+  color: #fff;
+}
+
+.page--applications .status-pill--applied {
+  background: var(--status-applied);
+  color: #fff;
+}
+
+.page--applications .status-pill--rejected {
+  background: var(--status-rejected);
+  color: #2c2c2c;
+}
+
+.page--applications .date-cell {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.88rem;
+}
+
+.page--applications .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1rem;
+  color: var(--neo-ink);
+}
+
+.page--applications .pagination__list {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page--applications .pagination__page {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.page--applications .pagination__page--current {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page--applications .pagination__edge {
+  opacity: 0.55;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
