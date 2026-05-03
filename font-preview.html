@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Font Preview — Hotchpotch</title>
+  <style>
+    @font-face { font-family: "70s Disco";          src: url("/fonts/70SdiscopersonaluseBold-w14z2.otf"); }
+    @font-face { font-family: "Abstract Groovy";    src: url("/fonts/AbstractGroovy-K7Zdy.ttf"); }
+    @font-face { font-family: "Ashington";          src: url("/fonts/Ashington-DO11x.otf"); }
+    @font-face { font-family: "Bashing";            src: url("/fonts/BashingdemoRegular-ZpGJB.otf"); }
+    @font-face { font-family: "Boogie Boys Extrude";src: url("/fonts/BoogieBoysExtrude-X36yG.otf"); }
+    @font-face { font-family: "Boogie Boys";        src: url("/fonts/BoogieBoysRegular-L36y3.otf"); }
+    @font-face { font-family: "Boogie Boys Shadow"; src: url("/fonts/BoogieBoysShadow-gx6AE.otf"); }
+    @font-face { font-family: "Cosmic Curl";        src: url("/fonts/CosmicCurlDemo-V4Rpy.otf"); }
+    @font-face { font-family: "CS Glover";          src: url("/fonts/CsGloverRegularDemo-ARW9L.otf"); }
+    @font-face { font-family: "Kitschy Retro";      src: url("/fonts/KitschyRetroRegular-9YnqB.ttf"); }
+    @font-face { font-family: "Krasty";             src: url("/fonts/Krasty-YzEX8.ttf"); }
+    @font-face { font-family: "Lane Fiegras";       src: url("/fonts/LaneFiegrasDemoRegular-ARyrp.otf"); }
+    @font-face { font-family: "Mommy Valentine";    src: url("/fonts/MommyValentineRegular-xRM0K.otf"); }
+    @font-face { font-family: "Monte Aesphy";       src: url("/fonts/MonteAesphyDemoRegular-V4jJZ.ttf"); }
+    @font-face { font-family: "Mumbai Curry";       src: url("/fonts/Mumbaicurrydemo-axWBo.otf"); }
+    @font-face { font-family: "Quiny Serif";        src: url("/fonts/QuinySerif-z8Ld4.ttf"); }
+    @font-face { font-family: "Retro Cool";         src: url("/fonts/RetroCool-Regular-b3a1.woff2") format("woff2"), url("/fonts/RetroCool-Regular-c06f.woff") format("woff"), url("/fonts/RetroCoolRegular-rgV2O.ttf") format("truetype"); }
+    @font-face { font-family: "Super Funky";        src: url("/fonts/SuperFunky-lgmWw.ttf"); }
+    @font-face { font-family: "Super Magic";        src: url("/fonts/SuperMagic-L3XVn.ttf"); }
+    @font-face { font-family: "Super Matcha";       src: url("/fonts/SuperMatcha-5yOJV.ttf"); }
+    @font-face { font-family: "Super Summer";       src: url("/fonts/SuperSummer-GOGjO.ttf"); }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f4ecd8;
+      color: #0d0d0d;
+      font-family: system-ui, sans-serif;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #f2bc1b;
+      padding: 1.5rem 2rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fffef9;
+      border: 2px solid #0d0d0d;
+      box-shadow: 5px 5px 0 #0d0d0d;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .card-name {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6b5e52;
+      border-bottom: 1px solid #e0d8cc;
+      padding-bottom: 0.5rem;
+    }
+
+    .sample-large {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+
+    .sample-medium {
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .sample-small {
+      font-size: 0.95rem;
+      color: #6b5e52;
+    }
+  </style>
+</head>
+<body>
+  <header>Hotchpotch — Font Preview</header>
+  <div class="grid" id="grid"></div>
+
+  <script>
+    const fonts = [
+      "70s Disco",
+      "Abstract Groovy",
+      "Ashington",
+      "Bashing",
+      "Boogie Boys Extrude",
+      "Boogie Boys",
+      "Boogie Boys Shadow",
+      "Cosmic Curl",
+      "CS Glover",
+      "Kitschy Retro",
+      "Krasty",
+      "Lane Fiegras",
+      "Mommy Valentine",
+      "Monte Aesphy",
+      "Mumbai Curry",
+      "Quiny Serif",
+      "Retro Cool",
+      "Super Funky",
+      "Super Magic",
+      "Super Matcha",
+      "Super Summer",
+    ];
+
+    const grid = document.getElementById("grid");
+
+    fonts.forEach(font => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div class="card-name">${font}</div>
+        <div class="sample-large" style="font-family:'${font}',sans-serif">Hotchpotch</div>
+        <div class="sample-medium" style="font-family:'${font}',sans-serif">Applications · Dashboard · Stats</div>
+        <div class="sample-small" style="font-family:'${font}',sans-serif">Google — Software Engineer Intern &nbsp;|&nbsp; Applied Jan 2025</div>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
